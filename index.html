@@ -1,74 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Earth</title>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind + daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Earth</title>
-  <!-- font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- tailwind + daisy ui cdn -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-
-<body>
-  <header class="py-6 bg-[#15803d]">
-    <nav class="flex justify-between items-center w-11/12 mx-auto">
-      <div class="flex items-center gap-3">
-        <div class="md:hidden">
-          <button class="" popovertarget="popover-1" style="anchor-name:--anchor-1">
-            <i class="text-4xl text-white fa-solid fa-bars"></i>
-          </button>
-          <ul class="dropdown menu w-40 rounded-box bg-base-100 shadow-sm" popover id="popover-1"
-            style="position-anchor:--anchor-1">
-            <li><a>About</a></li>
-            <li><a>Gallery</a></li>
-            <li><a>Plant a Tree</a></li>
+  <body>
+    <header class="py-6 bg-[#15803d]">
+      <nav class="flex justify-between items-center w-11/12 mx-auto">
+        <div class="flex items-center gap-3">
+          <div class="md:hidden">
+            <button
+              class=""
+              popovertarget="popover-1"
+              style="anchor-name: --anchor-1"
+            >
+              <i class="text-4xl text-white fa-solid fa-bars"></i>
+            </button>
+            <ul
+              class="dropdown menu w-40 rounded-box bg-base-100 shadow-sm"
+              popover
+              id="popover-1"
+              style="position-anchor: --anchor-1"
+            >
+              <li><a>About</a></li>
+              <li><a>Gallery</a></li>
+              <li><a>Plant a Tree</a></li>
+            </ul>
+          </div>
+          <div>
+            <a href="">
+              <h3 class="text-white text-2xl md:text-xl font-semibold">
+                Green Earth
+              </h3>
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <ul class="flex justify-center gap-6 font-medium text-white">
+            <li><a href="">About</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Plant a Tree</a></li>
           </ul>
         </div>
         <div>
-          <a href="">
-            <h3 class="text-white text-2xl md:text-xl font-semibold">Green Earth</h3>
-          </a>
+          <button
+            class="font-medium py-3 px-6 bg-[#facc15] text-[#15803d] rounded-full shadow-md hover:bg-[#eab308] hover:scale-105 transition-transform duration-300"
+          >
+            Plant a Tree
+          </button>
         </div>
-      </div>
-      <div class="hidden md:block">
-        <ul class="flex justify-center gap-6 font-medium text-white">
-          <li><a href="">About</a></li>
-          <li><a href="">Gallery</a></li>
-          <li><a href="">Plant a Tree</a></li>
-        </ul>
-      </div>
-      <div>
-        <button class="font-medium py-3 px-6 bg-[#facc15] text-[#15803d] rounded-full shadow-md hover:bg-[#eab308] hover:scale-105 transition-transform duration-300">
-          Plant a Tree
-        </button>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main>
-    <section class="flex justify-between items-center bg-[#cff0dc] mt-[3px] py-10 md:py-0 px-[15px] md:px-0">
-      <div>
-        <figure><img class="hidden md:block" src="./assets/hero-leaf1.png" alt=""></figure>
-      </div>
-      <div class="text-center">
-        <h1 class="text-[44px] font-bold">Plant a Tree, Grow a Future</h1>
-        <p class="text-[#1f2937] mb-6 mt-2">Join our mission to plant 1 million trees and make the Earth greener for
-          future
-          generations.</p>
-        <button class="font-medium py-3 px-6 bg-[#facc15] text-[#15803d] rounded-full shadow-md hover:bg-[#eab308] hover:scale-105 transition-transform duration-300">
-          Get Involved
-        </button>
-      </div>
-      <div>
-        <figure><img class="hidden md:block" src="./assets/hero-leaf2.png" alt=""></figure>
-      </div>
-    </section>
-  </main>
-</body>
+    <main>
+      <section
+        class="flex justify-between items-center bg-[#cff0dc] mt-[3px] py-10 md:py-0 px-[15px] md:px-0"
+      >
+        <div>
+          <figure>
+            <img class="hidden md:block" src="./assets/hero-leaf1.png" alt="" />
+          </figure>
+        </div>
+        <div class="text-center">
+          <h1 class="text-[44px] font-bold">Plant a Tree, Grow a Future</h1>
+          <p class="text-[#1f2937] mb-6 mt-2">
+            Join our mission to plant 1 million trees and make the Earth greener
+            for future generations.
+          </p>
+          <button
+            class="font-medium py-3 px-6 bg-[#facc15] text-[#15803d] rounded-full shadow-md hover:bg-[#eab308] hover:scale-105 transition-transform duration-300"
+          >
+            Get Involved
+          </button>
+        </div>
+        <div>
+          <figure>
+            <img class="hidden md:block" src="./assets/hero-leaf2.png" alt="" />
+          </figure>
+        </div>
+      </section>
 
+      <section class="w-11/12 mx-auto my-[100px]">
+        <h1
+          class="text-[32px] font-semibold text-[#1F2937] text-center mb-[40px]"
+        >
+          Choose Your Trees
+        </h1>
+        <div class="grid grid-cols-12 gap-[30px] h-full">
+          <div class="col-span-2">
+            <h3 class="text-xl font-semibold mb-6">Categories</h3>
+            <div class="space-y-[16px] text-[#1F2937]">
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                Fruit Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                Flowering Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+              <p
+                class="py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white"
+              >
+                All Trees
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-8 grid grid-cols-3 gap-[30px]">
+            <div class="p-4 bg-white rounded-lg">
+              <img src="./assets/about.png" alt="" />
+              <h3 class="text-[14px] font-semibold mt-3">Mango Tree</h3>
+              <p class="text-[12px] text-[#1F2937] my-2">
+                A fast-growing tropical tree that produces delicious, juicy
+                mangoes during summer. Its dense green
+              </p>
+              <div class="flex justify-between items-center mb-3">
+                <div class="py-1 px-3 bg-[#dcfce7] rounded-[400px]">
+                  <p class="text-[14px] text-[#15803d]">Fruit Tree</p>
+                </div>
+                <p class="text-[14px] font-semibold">৳500</p>
+              </div>
+              <button
+                class="py-3 px-5 font-medium text-white bg-[#15803D] rounded-full w-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <div class="p-4 bg-white rounded-lg">
+              <img src="./assets/about.png" alt="" />
+              <h3 class="text-[14px] font-semibold mt-3">Mango Tree</h3>
+              <p class="text-[12px] text-[#1F2937] my-2">
+                A fast-growing tropical tree that produces delicious, juicy
+                mangoes during summer. Its dense green
+              </p>
+              <div class="flex justify-between items-center mb-3">
+                <div class="py-1 px-3 bg-[#dcfce7] rounded-[400px]">
+                  <p class="text-[14px] text-[#15803d]">Fruit Tree</p>
+                </div>
+                <p class="text-[14px] font-semibold">৳500</p>
+              </div>
+              <button
+                class="py-3 px-5 font-medium text-white bg-[#15803D] rounded-full w-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <div class="p-4 bg-white rounded-lg">
+              <img src="./assets/about.png" alt="" />
+              <h3 class="text-[14px] font-semibold mt-3">Mango Tree</h3>
+              <p class="text-[12px] text-[#1F2937] my-2">
+                A fast-growing tropical tree that produces delicious, juicy
+                mangoes during summer. Its dense green
+              </p>
+              <div class="flex justify-between items-center mb-3">
+                <div class="py-1 px-3 bg-[#dcfce7] rounded-[400px]">
+                  <p class="text-[14px] text-[#15803d]">Fruit Tree</p>
+                </div>
+                <p class="text-[14px] font-semibold">৳500</p>
+              </div>
+              <button
+                class="py-3 px-5 font-medium text-white bg-[#15803D] rounded-full w-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <div class="p-4 bg-white rounded-lg">
+              <img src="./assets/about.png" alt="" />
+              <h3 class="text-[14px] font-semibold mt-3">Mango Tree</h3>
+              <p class="text-[12px] text-[#1F2937] my-2">
+                A fast-growing tropical tree that produces delicious, juicy
+                mangoes during summer. Its dense green
+              </p>
+              <div class="flex justify-between items-center mb-3">
+                <div class="py-1 px-3 bg-[#dcfce7] rounded-[400px]">
+                  <p class="text-[14px] text-[#15803d]">Fruit Tree</p>
+                </div>
+                <p class="text-[14px] font-semibold">৳500</p>
+              </div>
+              <button
+                class="py-3 px-5 font-medium text-white bg-[#15803D] rounded-full w-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <div class="p-4 bg-white rounded-lg">
+              <img src="./assets/about.png" alt="" />
+              <h3 class="text-[14px] font-semibold mt-3">Mango Tree</h3>
+              <p class="text-[12px] text-[#1F2937] my-2">
+                A fast-growing tropical tree that produces delicious, juicy
+                mangoes during summer. Its dense green
+              </p>
+              <div class="flex justify-between items-center mb-3">
+                <div class="py-1 px-3 bg-[#dcfce7] rounded-[400px]">
+                  <p class="text-[14px] text-[#15803d]">Fruit Tree</p>
+                </div>
+                <p class="text-[14px] font-semibold">৳500</p>
+              </div>
+              <button
+                class="py-3 px-5 font-medium text-white bg-[#15803D] rounded-full w-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <div class="p-4 bg-white rounded-lg">
+              <img src="./assets/about.png" alt="" />
+              <h3 class="text-[14px] font-semibold mt-3">Mango Tree</h3>
+              <p class="text-[12px] text-[#1F2937] my-2">
+                A fast-growing tropical tree that produces delicious, juicy
+                mangoes during summer. Its dense green
+              </p>
+              <div class="flex justify-between items-center mb-3">
+                <div class="py-1 px-3 bg-[#dcfce7] rounded-[400px]">
+                  <p class="text-[14px] text-[#15803d]">Fruit Tree</p>
+                </div>
+                <p class="text-[14px] font-semibold">৳500</p>
+              </div>
+              <button
+                class="py-3 px-5 font-medium text-white bg-[#15803D] rounded-full w-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <div class="col-span-2 bg-white space-y-2 p-4 rounded-2xl">
+            <h1 class="text-xl font-semibold">Your Cart</h1>
+
+            <div class="bg-[#f0fdf4] py-2 px-3 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h3 class="text-[14px] font-semibold">Mango Tree</h3>
+                  <p class="text-[#8b9798]">৳500</p>
+                </div>
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+
+            <div class="bg-[#f0fdf4] py-2 px-3 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h3 class="text-[14px] font-semibold">Mango Tree</h3>
+                  <p class="text-[#8b9798]">৳500</p>
+                </div>
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <hr class="text-[#8b9798]" />
+            <div class="flex justify-between items-center">
+              <h3 class="font-medium">Total</h3>
+              <h3 class="font-medium">৳1000</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
