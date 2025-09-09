@@ -11,6 +11,9 @@ const loadCategories = () => {
 
 const displayCategories = (categories) => {
   const categoryContainer = document.getElementById("category-container");
+  const categoryContainerDropDown = document.getElementById(
+    "category-container-dropdown"
+  );
 
   categories.forEach((category) => {
     const p = document.createElement("p");
@@ -19,6 +22,12 @@ const displayCategories = (categories) => {
 
     categoryContainer.appendChild(p);
 
+    const li = document.createElement("li");
+    li.className = `common-p category-name-plate-${category.id} py-2 px-[10px] rounded-[4px] hover:bg-[#15803D] hover:text-white cursor-pointer`;
+    li.innerText = `${category.category_name}`;
+
+    categoryContainerDropDown.appendChild(li);
+
     loadTreeCards(`${category.id}`);
   });
 };
@@ -26,6 +35,29 @@ const displayCategories = (categories) => {
 const loadTreeCards = (id) => {
   const categoryContainer = document.getElementById("category-container");
   categoryContainer.addEventListener("click", function (event) {
+    if (event.target.classList.contains(`category-name-plate-${id}`)) {
+      manageSpinner(true);
+      const commonP = document.querySelectorAll(".common-p");
+      commonP.forEach((p) => {
+        p.classList.remove("bg-[#15803D]", "text-white");
+      });
+
+      event.target.classList.add("bg-[#15803D]", "text-white");
+
+      const url = `https://openapi.programming-hero.com/api/category/${id}`;
+
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          displayTreeCards(data.plants);
+        });
+    }
+  });
+
+  const categoryContainerDropDown = document.getElementById(
+    "category-container-dropdown"
+  );
+  categoryContainerDropDown.addEventListener("click", function (event) {
     if (event.target.classList.contains(`category-name-plate-${id}`)) {
       manageSpinner(true);
       const commonP = document.querySelectorAll(".common-p");
@@ -57,8 +89,8 @@ const displayTreeCards = (cards) => {
 
     div.innerHTML = `
             <div>
-              <img class="rounded-lg h-[300px] w-full" src="${card.image}" alt="">
-              <span onclick="loadModal(${card.id})" class="card-name-${card.id} text-[14px] font-semibold mt-3 cursor-pointer">${card.name}</span>
+              <img class="rounded-lg h-[300px] w-full mb-3" src="${card.image}" alt="">
+              <span onclick="loadModal(${card.id})" class="card-name-${card.id} text-[14px] font-semibold cursor-pointer">${card.name}</span>
               <p class="text-[12px] text-[#1F2937] my-2">${card.description}</p>
               <div class="flex justify-between items-center mb-3">
                 <div class="py-1 px-3 bg-[#dcfce7] rounded-[400px]">
@@ -94,7 +126,7 @@ const displayModal = (plantsDetails) => {
 
   cardDetailsContainer.innerHTML = `
           <h1 class="text-2xl font-bold">${plantsDetails.name}</h1>
-          <img class="h-[300px] w-full" src="${plantsDetails.image}" alt="">
+          <img class="h-[300px] w-full rounded-lg" src="${plantsDetails.image}" alt="">
           <p><span class="font-bold">Category:</span> ${plantsDetails.category}</p>
           <p><span class="font-bold">Price:</span> ৳${plantsDetails.price}</p>
           <p><span class="font-bold">Description:</span> ${plantsDetails.description}</p>
